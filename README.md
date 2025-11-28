@@ -102,15 +102,13 @@ EduPath is a sophisticated AI tutoring system that uses a multi-agent architectu
 
 ### Example Interaction
 
+```
 User: I want to learn about machine learning
-
 EduPath: Great! What's your current experience level?
-
 User: Beginner
-
 EduPath: [Provides educational content...]
-
 Would you like to test your understanding with a quiz?
+```
 
 ## 📁 Project Structure
 
