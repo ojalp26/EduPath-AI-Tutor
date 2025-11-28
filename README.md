@@ -101,18 +101,27 @@ EduPath is a sophisticated AI tutoring system that uses a multi-agent architectu
 
 ### Example Interaction
 User: I want to learn about machine learning
+
 EduPath: Great! What's your current experience level?
 
 User: Beginner
+
 EduPath: [Provides educational content...]
+
 Would you like to test your understanding with a quiz?
 
 ## 📁 Project Structure
+
 edupath/
+
 ├── agent.py # Main tutoring agent
+
 ├── server.py # Backend registrar agent
+
 ├── requirements.txt # Python dependencies
+
 ├── .env # Environment variables
+
 └── README.md # Project documentation
 
 
@@ -126,13 +135,14 @@ edupath/
 - **Session Management**: SQLite
 
 ### Key Dependencies
-google-adk
-google-genai
-fastapi
-uvicorn
-python-dotenv
-requests
-pydantic
+
+- google-adk
+- google-genai
+- fastapi
+- uvicorn
+- python-dotenv
+- requests
+- pydantic
 
 
 ## 🔧 Configuration
