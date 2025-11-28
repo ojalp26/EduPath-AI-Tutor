@@ -58,7 +58,8 @@ EduPath is a sophisticated AI tutoring system that uses a multi-agent architectu
 1. **Clone the repository**
    ```
    git clone https://github.com/yourusername/edupath.git
-   cd edupath```
+   cd edupath
+   ```
 
 2. **Set up virtual environment**
    ```bash
@@ -100,6 +101,7 @@ EduPath is a sophisticated AI tutoring system that uses a multi-agent architectu
 4. **Knowledge Assessment** - Context-aware quiz generation with feedback
 
 ### Example Interaction
+
 User: I want to learn about machine learning
 
 EduPath: Great! What's your current experience level?
@@ -112,6 +114,7 @@ Would you like to test your understanding with a quiz?
 
 ## 📁 Project Structure
 
+```
 Code Implementation/
 ├── educlient
        ├── agent.py # Main tutoring agent
@@ -119,6 +122,7 @@ Code Implementation/
 ├── server.py # Backend registrar agent
 ├── requirements.txt # Python dependencies
 └── .env # Environment variables
+ ```
 
 
 
