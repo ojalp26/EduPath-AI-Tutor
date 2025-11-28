@@ -112,17 +112,14 @@ Would you like to test your understanding with a quiz?
 
 ## 📁 Project Structure
 
-edupath/
-
-├── agent.py # Main tutoring agent
-
+Code Implementation/
+├── educlient
+       ├── agent.py # Main tutoring agent
+       ├── __init__.py
 ├── server.py # Backend registrar agent
-
 ├── requirements.txt # Python dependencies
+└── .env # Environment variables
 
-├── .env # Environment variables
-
-└── README.md # Project documentation
 
 
 ## 🛠️ Technical Details
