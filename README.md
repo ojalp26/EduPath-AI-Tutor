@@ -61,90 +61,71 @@ EduPath is a sophisticated AI tutoring system that uses a multi-agent architectu
    cd edupath```
 
 2. **Set up virtual environment**
-```
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate```
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
 
-### Install dependencies:
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```
-pip install -r requirements.txt
-```
+4. **Configure environment**
+   ```bash
+   echo "GOOGLE_API_KEY=your_api_key_here" > .env
+   ```
 
 ### Running the Application
-Start the Registrar Server (Terminal 1)
 
-bash
-python server.py
-Server runs on: http://127.0.0.1:8001
+1. **Start the Registrar Server** (Terminal 1)
+   ```bash
+   python server.py
+   ```
+   *Server runs on: http://127.0.0.1:8001*
 
-Start the Tutor Interface (Terminal 2)
-
-bash
-adk web . --port 8000
-Web interface: http://127.0.0.1:8000
+2. **Start the Tutor Interface** (Terminal 2)
+   ```bash
+   adk web . --port 8000
+   ```
+   *Web interface: http://127.0.0.1:8000*
 
 ## 📖 Usage
-Learning Workflow
-Topic Selection
 
-User specifies interest area (e.g., "Python programming")
+### Learning Workflow
 
-System determines appropriate starting point
+1. **Topic Selection** - User specifies interest area
+2. **Level Assessment** - Beginner, Intermediate, or Advanced
+3. **Interactive Teaching** - Step-by-step explanations with examples
+4. **Knowledge Assessment** - Context-aware quiz generation with feedback
 
-Level Assessment
-
-Beginner, Intermediate, or Advanced
-
-Tailors content complexity accordingly
-
-Interactive Teaching
-
-Step-by-step explanations
-
-Practical examples and analogies
-
-Progressive concept building
-
-Knowledge Assessment
-
-Context-aware quiz generation
-
-Immediate feedback and explanations
-
-Progress tracking
-
-Example Interaction
-text
+### Example Interaction
 User: I want to learn about machine learning
-EduPath: Great! What's your current experience level - Beginner, Intermediate, or Advanced?
+EduPath: Great! What's your current experience level?
 
-User: Beginner  
-EduPath: [Stores preference] Let me explain machine learning basics...
-[Provides educational content]
+User: Beginner
+EduPath: [Provides educational content...]
 Would you like to test your understanding with a quiz?
-📁 Project Structure
-text
+
+## 📁 Project Structure
 edupath/
-├── agent.py              # Main tutoring agent with web interface
-├── server.py             # Backend registrar agent with FastAPI
-├── requirements.txt      # Python dependencies
-├── .env                 # Environment variables (API keys)
-└── README.md            # Project documentation
-🛠️ Technical Details
-Technologies Used
-Backend: FastAPI, Uvicorn
+├── agent.py # Main tutoring agent
+├── server.py # Backend registrar agent
+├── requirements.txt # Python dependencies
+├── .env # Environment variables
+└── README.md # Project documentation
 
-AI Framework: Google Agent Development Kit (ADK)
 
-AI Model: Gemini 2.0 Flash
+## 🛠️ Technical Details
 
-Session Management: SQLite
+### Technologies Used
 
-Communication: HTTP REST API, Tool-based integration
+- **Backend**: FastAPI, Uvicorn
+- **AI Framework**: Google Agent Development Kit (ADK)
+- **AI Model**: Gemini 2.0 Flash
+- **Session Management**: SQLite
 
-Key Dependencies
-text
+### Key Dependencies
 google-adk
 google-genai
 fastapi
@@ -152,56 +133,28 @@ uvicorn
 python-dotenv
 requests
 pydantic
-🔧 Configuration
-Environment Variables
-Create a .env file with:
 
-env
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env` file with:
+```env
 GOOGLE_API_KEY=your_gemini_api_key_here
 Model Configuration
 Primary Model: gemini-2.0-flash
-
 Fallback: gemini-flash-latest
+```
 
-Retry Configuration: 5 attempts with exponential backoff
 
-🎨 Customization
-Adding New Subjects
-Modify the instruction prompt in agent.py to include new domains:
 
-python
-instruction="""
-You are EduPath - now expanded to include:
-- Computer Science
-- Mathematics  
-- History
-- [Your Subject Here]
-...
-"""
-Extending Tools
-Add new tools to server.py:
 
-python
-def new_educational_tool(tool_context: ToolContext, parameter: str) -> str:
-    # Your custom logic here
-    return "Tool execution result"
-🤝 Contributing
-We welcome contributions! Please feel free to submit pull requests for:
+## 📄 License
+This project is licensed under the MIT License.
 
-New educational domains
 
-Enhanced quiz formats
-
-Additional tool integrations
-
-UI improvements
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
+## 🙏 Acknowledgments
 Google ADK team for the agent development framework
-
 FastAPI for the efficient web framework
-
-Gemini AI for the content generation capabilities
+Gemini AI for content generation capabilities
